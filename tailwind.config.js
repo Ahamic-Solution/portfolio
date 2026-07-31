@@ -7,18 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#05060a',
-        surface: '#0a0c14',
-        card: '#0e111c',
-        border: '#1b2030',
-        muted: '#8a90a6',
-        ink: '#eef1f8',
+        bg: '#05070f',
+        surface: '#0a0e1a',
+        card: '#0e1424',
+        border: '#1d283d',
+        muted: '#8c9ab8',
+        ink: '#f0f4fc',
         accent: {
-          DEFAULT: '#7c5cff',
-          soft: '#a58bff',
+          DEFAULT: '#0052ff',
+          soft: '#3b82f6',
         },
         cyan: {
-          glow: '#22d3ee',
+          glow: '#00d4ff',
         },
         success: '#34d399',
         warning: '#fbbf24',
@@ -34,8 +34,8 @@ export default {
         '3xl': '2rem',
       },
       boxShadow: {
-        glow: '0 0 60px -12px rgba(124, 92, 255, 0.55)',
-        'glow-cyan': '0 0 50px -14px rgba(34, 211, 238, 0.5)',
+        glow: '0 0 60px -12px rgba(0, 82, 255, 0.55)',
+        'glow-cyan': '0 0 50px -14px rgba(0, 212, 255, 0.5)',
         card: '0 24px 60px -30px rgba(0, 0, 0, 0.8)',
       },
       maxWidth: {

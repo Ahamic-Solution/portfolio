@@ -21,7 +21,7 @@ const base =
 'group relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors focus-visible:outline-none';
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-ink text-bg hover:bg-white shadow-[0_10px_40px_-12px_rgba(124,92,255,0.6)]',
+  primary: 'bg-ink text-bg hover:bg-white shadow-[0_10px_40px_-12px_rgba(0,82,255,0.6)]',
   ghost: 'border border-border bg-card/60 text-ink hover:border-accent/60 hover:bg-card'
 };
 

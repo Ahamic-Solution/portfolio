@@ -9,14 +9,14 @@
 /* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
 
 :root {
-  --bg: #05060a;
-  --surface: #0a0c14;
-  --card: #0e111c;
-  --border: #1b2030;
-  --muted: #8a90a6;
-  --text: #eef1f8;
-  --accent: #7c5cff;
-  --accent-2: #22d3ee;
+  --bg: #05070f;
+  --surface: #0a0e1a;
+  --card: #0e1424;
+  --border: #1d283d;
+  --muted: #8c9ab8;
+  --text: #f0f4fc;
+  --accent: #0052ff;
+  --accent-2: #00d4ff;
 }
 * {
   -webkit-font-smoothing: antialiased;
@@ -31,7 +31,7 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
 }
 ::selection {
-  background: rgba(124, 92, 255, 0.35);
+  background: rgba(0, 82, 255, 0.3);
   color: #fff;
 }
 .font-display {
@@ -39,7 +39,7 @@ body {
 }
 /* Gradient text */
 .text-gradient {
-  background: linear-gradient(100deg, #ffffff 0%, #c8bbff 45%, #7c5cff 70%, #22d3ee 100%);
+  background: linear-gradient(100deg, #ffffff 0%, #b3c5ff 45%, #0052ff 75%, #00d4ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,7 +78,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(140deg, rgba(124, 92, 255, 0.5), rgba(34, 211, 238, 0.15), transparent 60%);
+  background: linear-gradient(140deg, rgba(0, 82, 255, 0.5), rgba(0, 212, 255, 0.15), transparent 60%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;

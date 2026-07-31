@@ -27,7 +27,7 @@ export function Cursor() {
       style={{
         x: sx,
         y: sy,
-        background: 'radial-gradient(circle, rgba(124,92,255,0.10) 0%, transparent 60%)'
+        background: 'radial-gradient(circle, rgba(0,82,255,0.10) 0%, transparent 60%)'
       }} />);
 
 

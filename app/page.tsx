@@ -2,6 +2,7 @@ import React from 'react';
 import { Hero } from '../components/sections/Hero';
 import { Logos } from '../components/sections/Logos';
 import { Stats } from '../components/sections/Stats';
+import { GlobalMap } from '../components/sections/GlobalMap';
 import { WhyChooseUs } from '../components/sections/WhyChooseUs';
 import { ServicesGrid } from '../components/sections/ServicesGrid';
 import { FeaturedProjects } from '../components/sections/FeaturedProjects';
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <Logos />
       <Stats />
+      <GlobalMap />
       <WhyChooseUs />
       <ServicesGrid />
       <FeaturedProjects />

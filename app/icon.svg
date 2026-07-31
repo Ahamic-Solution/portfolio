@@ -1,0 +1,37 @@
+<svg width="32" height="32" viewBox="0 0 110 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blue-grad" x1="4" y1="10" x2="63" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00c0ff" />
+      <stop offset="0.6" stop-color="#0052ff" />
+      <stop offset="1" stop-color="#0022cc" />
+    </linearGradient>
+    <linearGradient id="dark-grad" x1="52" y1="12" x2="82" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#253053" />
+      <stop offset="1" stop-color="#0c1122" />
+    </linearGradient>
+    <linearGradient id="cyan-grad" x1="59" y1="44" x2="75" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00d4ff" />
+      <stop offset="1" stop-color="#0088ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- Stylized 'A' - Left ribbon -->
+  <path d="M 38 10 L 6 74 H 19 L 45 22 Z" fill="url(#blue-grad)" />
+  <path d="M 45 22 L 56 74 H 43 L 38 10 Z" fill="url(#blue-grad)" opacity="0.85" />
+  
+  <!-- Stylized 'S' - Dark interlocking ribbon -->
+  <path 
+    d="M 52 24 C 72 10, 102 18, 102 40 C 102 54, 88 60, 78 62 C 68 64, 62 66, 62 70 C 62 74, 72 74, 80 70 L 84 80 C 72 84, 52 82, 52 72 C 52 64, 58 60, 68 58 C 78 56, 92 52, 92 40 C 92 22, 68 18, 52 32 Z" 
+    fill="url(#dark-grad)" 
+    stroke="#0052ff" 
+    stroke-width="1.5" 
+  />
+
+  <!-- Code tag symbol </> nested in the S loop -->
+  <!-- Left bracket < -->
+  <path d="M 64 47 L 59 52 L 64 57" stroke="url(#cyan-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Slash / -->
+  <path d="M 71 44 L 67 60" stroke="#0052ff" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Right bracket > -->
+  <path d="M 70 47 L 75 52 L 70 57" stroke="url(#cyan-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

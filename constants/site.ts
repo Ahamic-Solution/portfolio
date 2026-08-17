@@ -22,12 +22,12 @@ import {
 
 export const SITE = {
   name: 'Ahamic Solutions',
-  tagline: 'We engineer software worth trusting.',
+  tagline: 'Software Development & Digital Solutions Company',
   subline:
-  'Ahamic Solutions is a product studio for ambitious teams — designing, building, and scaling digital products that feel effortless and perform under pressure.',
-  email: 'hello@ahamic.com',
-  phone: '+1 (415) 555-0148',
-  address: '580 Market Street, Suite 1200, San Francisco, CA'
+  'Ahamic Solutions is a software development company providing web development, mobile app development, SaaS, UI/UX design, and custom software solutions.',
+  email: 'ahamicsolutions@gmail.com',
+  phone: '01575890667',
+  address: 'Dhaka, Bangladesh'
 };
 
 export type Service = {
@@ -60,10 +60,10 @@ export const SERVICES: Service[] = [
 
 
 export const STATS = [
-{ value: 220, suffix: '+', label: 'Products shipped' },
-{ value: 14, suffix: '', label: 'Countries served' },
-{ value: 98, suffix: '%', label: 'Client retention' },
-{ value: 40, suffix: 'M+', label: 'Users reached' }];
+  { value: 30, suffix: '+', label: 'Projects completed' },
+  { value: 5, suffix: '+', label: 'Team members' },
+  { value: 95, suffix: '%', label: 'Client satisfaction' },
+  { value: 5, suffix: '+', label: 'Years experience' }];
 
 
 export const INDUSTRIES = [
@@ -72,7 +72,7 @@ export const INDUSTRIES = [
 'Hospitality', 'Sports', 'Marketplaces', 'Booking Platforms'];
 
 
-export const CLIENTS = ['Northwind', 'Vertex', 'Lumen', ' Orbital'.trim(), 'Quantifi', 'Halcyon', 'Meridian', 'Cascade'];
+export const CLIENTS = ['Web Platform', 'Mobile App', 'SaaS Product', 'Database Admin', 'Portal', 'Cloud Infrastructure'];
 
 export const WHY = [
 { title: 'Senior-only teams', body: 'Every engagement is staffed with senior designers and engineers — no hand-offs to juniors, no learning on your budget.' },
@@ -117,52 +117,50 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
 {
-  slug: 'northwind-fintech',
-  title: 'A payments platform trusted with billions',
-  client: 'Northwind',
-  category: 'FinTech',
+  slug: 'saas-dashboard',
+  title: 'Custom SaaS platform & analytics dashboard',
+  client: 'Software Client',
+  category: 'SaaS Development',
   year: '2025',
-  summary: 'A ground-up rebuild of a payments platform — faster onboarding, real-time reconciliation, and a design system that scaled across 6 products.',
-  image: 'PROJECT_NORTHWIND',
-  metrics: [{ label: 'Faster onboarding', value: '3.4x' }, { label: 'Uptime', value: '99.99%' }]
-},
-{
-  slug: 'lumen-health',
-  title: 'Care coordination for 2M+ patients',
-  client: 'Lumen Health',
-  category: 'Healthcare',
-  year: '2024',
-  summary: 'A HIPAA-compliant care platform connecting patients, providers, and payers with an interface clinicians actually enjoy using.',
-  image: 'PROJECT_LUMEN',
-  metrics: [{ label: 'Admin time saved', value: '42%' }, { label: 'NPS', value: '+71' }]
-},
-{
-  slug: 'vertex-ai',
-  title: 'An AI workspace that ships answers',
-  client: 'Vertex AI',
-  category: 'AI',
-  year: '2025',
-  summary: 'A retrieval-augmented workspace turning scattered company knowledge into instant, cited answers for enterprise teams.',
+  summary: 'Designed and engineered a high-performance analytics dashboard, simplifying user workflows and data visualizations.',
   image: 'PROJECT_VERTEX',
-  metrics: [{ label: 'Search time', value: '-88%' }, { label: 'Adoption', value: '94%' }]
+  metrics: [{ label: 'Workflow speed', value: '1.5x' }, { label: 'User adoption', value: '92%' }]
 },
 {
-  slug: 'cascade-logistics',
-  title: 'Real-time visibility across the supply chain',
-  client: 'Cascade',
-  category: 'Logistics',
+  slug: 'e-commerce-portal',
+  title: 'Modern and accessible e-commerce platform',
+  client: 'Retail Partner',
+  category: 'Web Development',
   year: '2024',
-  summary: 'A control-tower platform giving operations teams live tracking, predictive ETAs, and automated exception handling.',
+  summary: 'Developed a robust, search-optimized e-commerce storefront with dynamic cart logic and secure payment integrations.',
   image: 'PROJECT_CASCADE',
-  metrics: [{ label: 'On-time delivery', value: '+27%' }, { label: 'Manual work', value: '-60%' }]
+  metrics: [{ label: 'Page load time', value: '-45%' }, { label: 'Conversion rate', value: '+12%' }]
+},
+{
+  slug: 'hospital-management',
+  title: 'Internal management system for clinical workflows',
+  client: 'Healthcare Partner',
+  category: 'Software Development',
+  year: '2025',
+  summary: 'Built a secure, custom administration platform to manage scheduling, billing, and patient records securely.',
+  image: 'PROJECT_LUMEN',
+  metrics: [{ label: 'Admin time saved', value: '30%' }, { label: 'Uptime', value: '99.9%' }]
+},
+{
+  slug: 'logistics-tracker',
+  title: 'Real-time tracking and delivery management app',
+  client: 'Logistics Client',
+  category: 'Mobile App Development',
+  year: '2024',
+  summary: 'Engineered a cross-platform mobile app for real-time tracking, offline sync, and delivery routing.',
+  image: 'PROJECT_NORTHWIND',
+  metrics: [{ label: 'On-time delivery', value: '+15%' }, { label: 'Manual work', value: '-50%' }]
 }];
 
 
 export const TESTIMONIALS = [
-{ quote: 'Ahamic operates like an in-house team that happens to be the best you have ever hired. They shipped what three prior vendors could not.', name: 'Sarah Chen', role: 'CTO, Northwind', avatar: 'AVATAR_SARAH' },
-{ quote: 'The craft is extraordinary, but what sets them apart is judgment. They pushed back, made us better, and delivered ahead of schedule.', name: 'Marcus Reyes', role: 'VP Product, Lumen Health', avatar: 'AVATAR_MARCUS' },
-{ quote: 'We went from prototype to a platform serving enterprise customers in four months. Ahamic made the impossible feel routine.', name: 'Priya Nair', role: 'Founder & CEO, Vertex AI', avatar: 'AVATAR_PRIYA' },
-{ quote: 'Every detail is considered. Our conversion rate climbed 34% within weeks of launch, and the code is a joy to maintain.', name: 'Daniel Okafor', role: 'Head of Growth, Cascade', avatar: 'AVATAR_DANIEL' }];
+{ quote: 'Ahamic Solutions operates like an extension of our own team. They designed and shipped our application on schedule and with high attention to detail.', name: 'Sarah Chen', role: 'CTO, Software Client', avatar: 'AVATAR_SARAH' },
+{ quote: 'The team design choices and execution were excellent. They delivered a highly responsive system that handles our workload effortlessly.', name: 'Marcus Reyes', role: 'VP Product, Retail Partner', avatar: 'AVATAR_MARCUS' }];
 
 
 export const AWARDS = [

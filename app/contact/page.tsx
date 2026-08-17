@@ -74,7 +74,7 @@ export default function Contact() {
                   </span>
                 </div>
                 <span className="absolute bottom-4 left-4 rounded-full bg-black/50 px-3 py-1 text-xs text-white backdrop-blur">
-                  San Francisco · Remote worldwide
+                  Dhaka, Bangladesh · Remote worldwide
                 </span>
               </div>
             </div>

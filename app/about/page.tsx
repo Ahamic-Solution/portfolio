@@ -19,9 +19,7 @@ const VALUES = [
 
 const TEAM = [
 { name: 'Amir Haque', role: 'Founder & Principal Engineer', initials: 'AH' },
-{ name: 'Nadia Rahman', role: 'Head of Design', initials: 'NR' },
-{ name: 'Leo Martins', role: 'Engineering Lead', initials: 'LM' },
-{ name: 'Sofia Alvarez', role: 'Product Strategy', initials: 'SA' }];
+{ name: 'Nadia Rahman', role: 'Head of Design', initials: 'NR' }];
 
 
 export default function About() {

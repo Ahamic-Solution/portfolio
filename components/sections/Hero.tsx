@@ -11,7 +11,7 @@ import { Aurora } from '../shared/Aurora';
 import { img } from '../../constants/images';
 import { SITE } from '../../constants/site';
 
-const words = ['We', 'engineer', 'software', 'worth', 'trusting.'];
+const words = ['Software', 'Development', '&', 'Digital', 'Solutions'];
 
 const container = {
   hidden: {},
@@ -33,14 +33,8 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs text-muted backdrop-blur">
-          
-          <span className="flex items-center gap-0.5 text-warning">
-            {Array.from({ length: 5 }).map((_, i) =>
-            <StarIcon key={i} className="h-3 w-3 fill-current" />
-            )}
-          </span>
-          Rated 5.0 by 40+ founders & product leaders
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs text-muted backdrop-blur font-display font-medium tracking-wider uppercase">
+          Ahamic Solutions · Software Development Company
         </motion.div>
 
         <motion.h1

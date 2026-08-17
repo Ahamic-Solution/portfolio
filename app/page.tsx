@@ -10,7 +10,6 @@ import { Technologies } from '../components/sections/Technologies';
 import { Industries } from '../components/sections/Industries';
 import { Process } from '../components/sections/Process';
 import { Testimonials } from '../components/sections/Testimonials';
-import { Awards } from '../components/sections/Awards';
 import { FAQ } from '../components/sections/FAQ';
 import { BlogPreview } from '../components/sections/BlogPreview';
 import { CTA } from '../components/sections/CTA';
@@ -29,10 +28,8 @@ export default function Home() {
       <Industries />
       <Process />
       <Testimonials />
-      <Awards />
       <FAQ />
       <BlogPreview />
       <CTA />
     </>);
-
 }

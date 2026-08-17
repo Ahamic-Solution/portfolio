@@ -4,7 +4,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUpRightIcon, GithubIcon, LinkedinIcon, TwitterIcon, DribbbleIcon } from 'lucide-react';
+import { ArrowUpRightIcon, Facebook, LinkedinIcon } from 'lucide-react';
 import { Logo } from './Logo';
 import { SITE, SERVICES, INDUSTRIES } from '../../constants/site';
 
@@ -44,10 +44,9 @@ const columns = [
 
 
 const socials = [
-{ icon: TwitterIcon, label: 'Twitter', href: '#' },
-{ icon: LinkedinIcon, label: 'LinkedIn', href: '#' },
-{ icon: GithubIcon, label: 'GitHub', href: '#' },
-{ icon: DribbbleIcon, label: 'Dribbble', href: '#' }];
+  { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/ahamicsolutions' },
+  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://www.linkedin.com/company/ahamicsolutions/' }
+];
 
 
 export function Footer() {

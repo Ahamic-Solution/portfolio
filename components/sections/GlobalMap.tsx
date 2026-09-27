@@ -90,8 +90,8 @@ export function GlobalMap() {
       #world-map #${c.id},
       #world-map g#${c.id} path,
       #world-map path[id="_${c.id}"] {
-        fill: rgba(0, 149, 255, 0.08) !important;
-        stroke: rgba(0, 210, 255, 0.3) !important;
+        fill: rgba(0, 82, 255, 0.15) !important;
+        stroke: rgba(0, 82, 255, 0.5) !important;
         stroke-width: 1.2px !important;
       }
     `
@@ -102,10 +102,10 @@ export function GlobalMap() {
       #world-map #${hoveredCountry},
       #world-map g#${hoveredCountry} path,
       #world-map path[id="_${hoveredCountry}"] {
-        fill: rgba(0, 210, 255, 0.22) !important;
-        stroke: rgba(0, 210, 255, 0.85) !important;
+        fill: rgba(0, 82, 255, 0.28) !important;
+        stroke: rgba(0, 82, 255, 0.9) !important;
         stroke-width: 1.5px !important;
-        filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.5)) !important;
+        filter: drop-shadow(0 0 8px rgba(0, 82, 255, 0.3)) !important;
       }
     `
     : '';
@@ -117,10 +117,10 @@ export function GlobalMap() {
     CLIENT_COUNTRIES[0];
 
   return (
-    <Section className="py-20 md:py-28 bg-[#02040a] relative overflow-hidden" id="global-presence">
+    <Section className="py-20 md:py-28 bg-[#f1f5f9] border-y border-slate-200/80 text-slate-900 relative overflow-hidden" id="global-presence">
       {/* Decorative background grid and glow */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0c1020_1px,transparent_1px),linear-gradient(to_bottom,#0c1020_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-35" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-70" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Styled SVG inject CSS */}
       <style dangerouslySetInnerHTML={{ __html: `
@@ -129,9 +129,9 @@ export function GlobalMap() {
           height: 100%;
         }
         #world-map path {
-          fill: #080c18;
-          stroke: rgba(255, 255, 255, 0.05);
-          stroke-width: 1px;
+          fill: #cbd5e1;
+          stroke: #94a3b8;
+          stroke-width: 0.8px;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         ${activeStyleRules}
@@ -142,18 +142,18 @@ export function GlobalMap() {
         {/* Header */}
         <div className="max-w-3xl mb-16">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/20 bg-accent/5 text-xs text-accent font-semibold mb-4 tracking-wide uppercase">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-200 bg-blue-50 text-xs text-blue-700 font-semibold mb-4 tracking-wide uppercase">
               <GlobeIcon className="w-3.5 h-3.5 animate-pulse" />
               Global Footprint
             </div>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="font-display text-4xl font-semibold text-ink sm:text-5xl tracking-tight mb-4">
-              Where ahamic software <span className="bg-gradient-to-r from-accent to-cyan-400 bg-clip-text text-transparent">runs the world</span>
+            <h2 className="font-display text-4xl font-semibold text-slate-900 sm:text-5xl tracking-tight mb-4">
+              Where ahamic software <span className="bg-gradient-to-r from-slate-900 via-accent to-blue-600 bg-clip-text text-transparent">runs the world</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-lg text-muted">
+            <p className="text-lg text-slate-600">
               We design and engineer platforms powering industry leaders and fast-growing teams across multiple continents. Move your cursor or click on highlighted countries to explore.
             </p>
           </Reveal>
@@ -162,7 +162,7 @@ export function GlobalMap() {
         {/* Map Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:items-stretch">
           {/* Map display */}
-          <div className="lg:col-span-8 bg-surface/40 backdrop-blur-md border border-border/80 rounded-3xl p-4 md:p-8 relative flex flex-col justify-center items-center">
+          <div className="lg:col-span-8 bg-white border border-slate-200/80 rounded-3xl p-4 md:p-8 relative flex flex-col justify-center items-center shadow-lg shadow-slate-900/5">
             <div 
               ref={containerRef}
               className="relative w-full aspect-[784/459] select-none"
@@ -172,12 +172,12 @@ export function GlobalMap() {
               {/* World Map SVG */}
               {svgContent ? (
                 <div 
-                  className="w-full h-full text-zinc-700"
+                  className="w-full h-full text-slate-600"
                   dangerouslySetInnerHTML={{ __html: svgContent }} 
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center bg-surface/20 rounded-2xl">
-                  <span className="text-sm text-muted animate-pulse">Loading global node network...</span>
+                <div className="w-full h-full flex items-center justify-center bg-slate-100 rounded-2xl">
+                  <span className="text-sm text-slate-500 animate-pulse">Loading global node network...</span>
                 </div>
               )}
 
@@ -205,27 +205,27 @@ export function GlobalMap() {
                     </span>
 
                     {/* Pin center core */}
-                    <span className={`relative flex items-center justify-center w-4 h-4 rounded-full border bg-surface transition-all duration-300 ${
+                    <span className={`relative flex items-center justify-center w-4 h-4 rounded-full border bg-white transition-all duration-300 ${
                       isHovered || isSelected 
-                        ? 'border-accent shadow-[0_0_15px_rgba(0,210,255,0.8)] scale-110' 
-                        : 'border-accent/40 shadow-md'
+                        ? 'border-accent shadow-[0_0_15px_rgba(0,82,255,0.5)] scale-110' 
+                        : 'border-accent/40 shadow-sm'
                     }`}>
                       <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                     </span>
 
                     {/* Pop-up tooltip directly above the pin (Desktop hover) */}
-                    <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-3 bg-[#0d1324] border border-border/80 text-ink rounded-xl px-3 py-2 text-xs font-semibold whitespace-nowrap shadow-2xl transition-all duration-300 pointer-events-none ${
+                    <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-3 bg-slate-900 border border-slate-800 text-white rounded-xl px-3 py-2 text-xs font-semibold whitespace-nowrap shadow-2xl transition-all duration-300 pointer-events-none ${
                       isHovered ? 'opacity-100 translate-y-0 visible scale-100' : 'opacity-0 translate-y-1 invisible scale-95'
                     }`}>
                       <div className="flex items-center gap-1.5">
                         <span className="text-base">{c.flag}</span>
                         <span>{c.name}</span>
-                        <span className="text-accent bg-accent/10 px-1.5 py-0.5 rounded text-[10px]">
+                        <span className="text-blue-300 bg-blue-500/20 px-1.5 py-0.5 rounded text-[10px]">
                           {c.clients} {c.clients === 1 ? 'client' : 'clients'}
                         </span>
                       </div>
                       {/* Arrow tail */}
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-[#0d1324] border-r border-b border-border/80 rotate-45" />
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-900 border-r border-b border-slate-800 rotate-45" />
                     </div>
                   </button>
                 );
@@ -236,7 +236,7 @@ export function GlobalMap() {
           {/* Details & Sidebar Panel */}
           <div className="lg:col-span-4 flex flex-col gap-6">
             {/* Active details card */}
-            <div className="bg-surface/50 backdrop-blur-md border border-border/80 rounded-3xl p-6 relative overflow-hidden group min-h-[180px] flex flex-col justify-between">
+            <div className="bg-white border border-slate-200/80 rounded-3xl p-6 relative overflow-hidden group min-h-[180px] flex flex-col justify-between shadow-lg shadow-slate-900/5">
               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
                 <UsersIcon className="w-24 h-24 text-accent" />
               </div>
@@ -245,27 +245,27 @@ export function GlobalMap() {
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-4xl">{activeDetail.flag}</span>
                   <div>
-                    <h3 className="font-display text-xl font-medium text-ink">{activeDetail.name}</h3>
-                    <p className="text-xs text-muted font-mono uppercase tracking-widest">{activeDetail.region}</p>
+                    <h3 className="font-display text-xl font-semibold text-slate-900">{activeDetail.name}</h3>
+                    <p className="text-xs text-slate-500 font-mono uppercase tracking-widest">{activeDetail.region}</p>
                   </div>
                 </div>
-                <p className="text-muted text-sm leading-relaxed mb-6">
+                <p className="text-slate-600 text-sm leading-relaxed mb-6">
                   {activeDetail.text}
                 </p>
               </div>
 
-              <div className="flex items-center justify-between pt-4 border-t border-border/50">
+              <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-lg bg-accent/10 text-accent">
+                  <div className="p-2 rounded-lg bg-blue-50 text-accent">
                     <UsersIcon className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-ink leading-none">{activeDetail.clients}</div>
-                    <div className="text-[10px] text-muted uppercase tracking-wider">Active Partners</div>
+                    <div className="text-lg font-bold text-slate-900 leading-none">{activeDetail.clients}</div>
+                    <div className="text-[10px] text-slate-500 uppercase tracking-wider">Active Partners</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1.5 text-xs text-accent font-semibold bg-accent/5 px-3 py-1.5 rounded-xl border border-accent/10">
+                <div className="flex items-center gap-1.5 text-xs text-accent font-semibold bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-200">
                   <SparklesIcon className="w-3.5 h-3.5 text-accent animate-spin-slow" />
                   <span>Production Ready</span>
                 </div>
@@ -273,8 +273,8 @@ export function GlobalMap() {
             </div>
 
             {/* List panel */}
-            <div className="bg-surface/30 backdrop-blur-md border border-border/50 rounded-3xl p-6 flex-1 flex flex-col min-h-[250px]">
-              <h4 className="text-xs font-semibold text-muted uppercase tracking-widest mb-4">Active Regions</h4>
+            <div className="bg-white border border-slate-200/80 rounded-3xl p-6 flex-1 flex flex-col min-h-[250px] shadow-lg shadow-slate-900/5">
+              <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Active Regions</h4>
               <div className="overflow-y-auto h-0 flex-grow pr-1 custom-scrollbar space-y-1">
                 {CLIENT_COUNTRIES.map((c) => {
                   const isHovered = hoveredCountry === c.id;
@@ -288,8 +288,8 @@ export function GlobalMap() {
                       onClick={() => setSelectedCountry(isSelected ? null : c)}
                       className={`w-full flex items-center justify-between p-3 rounded-2xl border text-left transition-all ${
                         isHovered || isSelected
-                          ? 'bg-surface border-accent/30 text-ink pl-4 shadow-sm'
-                          : 'border-transparent text-muted hover:text-ink hover:bg-surface/40'
+                          ? 'bg-blue-50/80 border-blue-200 text-slate-900 pl-4 shadow-sm'
+                          : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -297,7 +297,7 @@ export function GlobalMap() {
                         <span className="text-sm font-medium">{c.name}</span>
                       </div>
                       <span className={`text-xs font-mono px-2 py-0.5 rounded-full ${
-                        isHovered || isSelected ? 'bg-accent/10 text-accent' : 'bg-surface/50 border border-border'
+                        isHovered || isSelected ? 'bg-accent text-white' : 'bg-slate-100 border border-slate-200 text-slate-600'
                       }`}>
                         {c.clients} P
                       </span>

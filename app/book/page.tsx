@@ -109,7 +109,7 @@ export default function Book() {
 
                 <div className="mt-6 flex items-center justify-between gap-4">
                   <p className="text-sm text-muted">Selected: <span className="text-ink">{day} · {time}</span></p>
-                  <button type="submit" className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-bg hover:bg-white">
+                  <button type="submit" className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-bg hover:bg-slate-800">
                     Confirm booking <ArrowUpRightIcon className="h-4 w-4" />
                   </button>
                 </div>

@@ -7,22 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#05070f',
-        surface: '#0a0e1a',
-        card: '#0e1424',
-        border: '#1d283d',
-        muted: '#8c9ab8',
-        ink: '#f0f4fc',
+        bg: 'var(--bg)',
+        surface: 'var(--surface)',
+        card: 'var(--card)',
+        border: 'var(--border)',
+        muted: 'var(--muted)',
+        ink: 'var(--text)',
         accent: {
-          DEFAULT: '#0052ff',
-          soft: '#3b82f6',
+          DEFAULT: 'var(--accent)',
+          soft: '#0052ff',
         },
         cyan: {
-          glow: '#00d4ff',
+          glow: 'var(--accent-2)',
         },
-        success: '#34d399',
-        warning: '#fbbf24',
-        danger: '#f87171',
+        success: '#10b981',
+        warning: '#f59e0b',
+        danger: '#ef4444',
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
@@ -34,9 +34,9 @@ export default {
         '3xl': '2rem',
       },
       boxShadow: {
-        glow: '0 0 60px -12px rgba(0, 82, 255, 0.55)',
-        'glow-cyan': '0 0 50px -14px rgba(0, 212, 255, 0.5)',
-        card: '0 24px 60px -30px rgba(0, 0, 0, 0.8)',
+        glow: '0 12px 40px -10px rgba(0, 82, 255, 0.25)',
+        'glow-cyan': '0 12px 40px -10px rgba(0, 153, 255, 0.25)',
+        card: '0 20px 40px -15px rgba(15, 23, 42, 0.07), 0 1px 3px rgba(15, 23, 42, 0.04)',
       },
       maxWidth: {
         container: '1200px',
@@ -45,3 +45,4 @@ export default {
   },
   plugins: [],
 }
+

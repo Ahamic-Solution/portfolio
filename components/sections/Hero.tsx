@@ -33,7 +33,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs text-muted backdrop-blur font-display font-medium tracking-wider uppercase">
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 px-4 py-1.5 text-xs text-blue-700 backdrop-blur font-display font-medium tracking-wider uppercase shadow-sm">
           Ahamic Solutions · Software Development Company
         </motion.div>
 
@@ -84,15 +84,15 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="relative mt-16 w-full max-w-5xl">
           
-          <div className="animate-floaty gradient-border overflow-hidden rounded-3xl shadow-glow">
+          <div className="animate-floaty overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-2 md:p-3 shadow-2xl shadow-blue-900/10 ring-1 ring-slate-100">
             <img
-              src={img('PROJECT_NORTHWIND')}
-              alt="Ahamic Solutions product dashboard preview"
-              className="w-full"
+              src={img('HERO_TEAM')}
+              alt="Ahamic Solutions software engineering team collaboration"
+              className="w-full rounded-2xl border border-slate-100 object-cover max-h-[540px]"
               loading="eager" />
             
           </div>
-          <div className="pointer-events-none absolute -inset-x-10 -bottom-10 h-40 bg-gradient-to-t from-bg to-transparent" />
+          <div className="pointer-events-none absolute -inset-x-10 -bottom-10 h-32 bg-gradient-to-t from-bg via-bg/60 to-transparent" />
         </motion.div>
       </div>
     </section>);

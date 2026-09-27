@@ -73,7 +73,7 @@ export default function Contact() {
                     <MapPinIcon className="h-6 w-6" />
                   </span>
                 </div>
-                <span className="absolute bottom-4 left-4 rounded-full bg-black/50 px-3 py-1 text-xs text-white backdrop-blur">
+                <span className="absolute bottom-4 left-4 rounded-full border border-slate-200 bg-white/95 px-3 py-1 text-xs font-medium text-slate-900 backdrop-blur shadow-sm">
                   Dhaka, Bangladesh · Remote worldwide
                 </span>
               </div>
@@ -118,7 +118,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bg transition-colors hover:bg-white disabled:opacity-60 sm:w-auto">
+                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bg transition-colors hover:bg-slate-800 disabled:opacity-60 sm:w-auto">
                   
                   {submitting ?
                   <><Loader2Icon className="h-4 w-4 animate-spin" /> Sending…</> :

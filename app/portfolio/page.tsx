@@ -68,7 +68,7 @@ export default function Portfolio() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   
-                    <span className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-xs text-white backdrop-blur">
+                    <span className="absolute left-4 top-4 rounded-full border border-slate-200/80 bg-white/90 px-3 py-1 text-xs font-semibold text-slate-900 backdrop-blur shadow-sm">
                       {project.category}
                     </span>
                   </div>

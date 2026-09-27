@@ -31,11 +31,11 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          'flex w-full max-w-container items-center justify-between rounded-full px-4 py-2.5 transition-all duration-300',
-          scrolled ? 'glass shadow-card' : 'border border-transparent'
+          'flex w-full max-w-container items-center justify-between rounded-full px-5 py-2.5 transition-all duration-300 bg-white/80 text-slate-900 backdrop-blur-xl border border-slate-200/80 shadow-[0_4px_25px_-5px_rgba(15,23,42,0.06)]',
+          scrolled ? 'border-slate-300/80 shadow-[0_8px_30px_-5px_rgba(15,23,42,0.1)] bg-white/90' : ''
         )}>
         
-        <Logo />
+        <Logo variant="light" />
 
         <ul className="hidden items-center gap-1 md:flex">
           {NAV_LINKS.map((link) => {
@@ -46,13 +46,13 @@ export function Navbar() {
                   href={link.to}
                   className={cn(
                     'relative rounded-full px-4 py-2 text-sm font-medium transition-colors',
-                    active ? 'text-ink' : 'text-muted hover:text-ink'
+                    active ? 'text-slate-900 font-semibold' : 'text-slate-600 hover:text-slate-900'
                   )}>
                   
                   {active &&
                   <motion.span
                     layoutId="nav-pill"
-                    className="absolute inset-0 -z-10 rounded-full bg-card ring-1 ring-border"
+                    className="absolute inset-0 -z-10 rounded-full bg-slate-100 ring-1 ring-slate-200/80"
                     transition={{ type: 'spring', stiffness: 350, damping: 30 }} />
 
                   }
@@ -64,14 +64,14 @@ export function Navbar() {
         </ul>
 
         <div className="hidden md:block">
-          <MagneticButton to="/book" variant="primary" className="px-5 py-2.5">
+          <MagneticButton to="/book" variant="primary" className="px-5 py-2.5 bg-accent text-white hover:bg-blue-600 shadow-md shadow-blue-500/20">
             Book a call
             <ArrowUpRightIcon className="h-4 w-4" />
           </MagneticButton>
         </div>
 
         <button
-          className="grid h-10 w-10 place-items-center rounded-full text-ink md:hidden"
+          className="grid h-10 w-10 place-items-center rounded-full text-slate-700 hover:text-slate-900 md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}>
@@ -87,14 +87,14 @@ export function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.25 }}
-          className="absolute left-4 right-4 top-20 z-40 glass rounded-3xl p-4 md:hidden">
+          className="absolute left-4 right-4 top-20 z-40 bg-white/95 border border-slate-200 text-slate-900 rounded-3xl p-4 backdrop-blur-2xl shadow-xl md:hidden">
           
             <ul className="flex flex-col gap-1">
               {NAV_LINKS.map((link) =>
             <li key={link.to}>
                   <Link
                 href={link.to}
-                className="block rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-card">
+                className="block rounded-2xl px-4 py-3 text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                 
                     {link.label}
                   </Link>
@@ -102,8 +102,8 @@ export function Navbar() {
             )}
             </ul>
             <Link
-            href="/book"
-            className="mt-2 flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium text-bg">
+              href="/book"
+              className="mt-2 flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-medium text-white hover:bg-blue-600 shadow-md shadow-blue-500/20">
             
               Book a call <ArrowUpRightIcon className="h-4 w-4" />
             </Link>

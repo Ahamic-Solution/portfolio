@@ -21,8 +21,8 @@ const base =
 'group relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors focus-visible:outline-none';
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-accent text-white hover:bg-blue-600 shadow-md shadow-blue-500/25',
-  ghost: 'border border-slate-200 bg-white text-slate-900 hover:border-slate-300 hover:bg-slate-50 shadow-sm'
+  primary: 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-md shadow-indigo-500/30',
+  ghost: 'border border-slate-300 bg-white/90 text-slate-800 hover:border-indigo-300 hover:bg-indigo-50/60 shadow-sm backdrop-blur'
 };
 
 export function MagneticButton({

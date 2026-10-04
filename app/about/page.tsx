@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { PageHero } from '../../components/shared/PageHero';
+import { AboutGalleryShowcase } from '../../components/sections/AboutGalleryShowcase';
 import { Stats } from '../../components/sections/Stats';
 import { Process } from '../../components/sections/Process';
 import { Section, SectionHeading } from '../../components/shared/Section';
@@ -30,7 +31,9 @@ export default function About() {
         eyebrow="Our story"
         title={<>A studio built on craft,<br />candor, and consequence.</>}
         subtitle="Ahamic Solutions started with a simple conviction: the best software comes from small, senior teams who care deeply and stay accountable. Years later, that is still exactly how we work." />
-      
+
+      {/* ── Mosaic gallery (same arch-grid as Hero) ── */}
+      <AboutGalleryShowcase />
 
       <Stats />
 
